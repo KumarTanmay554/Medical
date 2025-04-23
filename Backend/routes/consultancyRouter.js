@@ -18,11 +18,11 @@ router.get('/', async (req, res) => {
   });
 
   router.post('/', async (req, res) => {
-<<<<<<< HEAD
-  const { name, age, address, gender, disease, doctor, dateOfAppointment, timing, mobile, email,token} = req.body;
-=======
+
+  // const { name, age, address, gender, disease, doctor, dateOfAppointment, timing, mobile, email,token} = req.body;
+
   const { name, age, address, gender, disease, doctor, dateOfAppointment, timing, mobile, email, token} = req.body;
->>>>>>> 88e79cf04b26c5a63b31b90f586beb20556579b8
+
   // console.log("Incoming Consultancy Data:", req.body);
 
   // const token = generateToken();
@@ -39,11 +39,11 @@ router.get('/', async (req, res) => {
       timing,
       mobile,
       email,
-<<<<<<< HEAD
+// <<<<<<< HEAD
       token,
-=======
-       token,
->>>>>>> 88e79cf04b26c5a63b31b90f586beb20556579b8
+// =======
+//        token,
+// >>>>>>> 88e79cf04b26c5a63b31b90f586beb20556579b8
       // fee
     });
 

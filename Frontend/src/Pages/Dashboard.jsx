@@ -4,6 +4,7 @@ import { Chart, registerables } from "chart.js/auto";
 import { Bar, Line, Pie } from "react-chartjs-2";
 import Sidebar from "../Components/Sidebar";
 import axios from "axios";
+import DoctorCountBox from "../Components/DoctorCountBox";
 // import Navbars from "../Components/Navbars";
 Chart.register(...registerables);
 
@@ -82,6 +83,24 @@ function Dashboard() {
     <div>
       <Navbars />
       <Sidebar />
+      <div
+        style={{
+          margin: "20px auto",
+          width: "80%",
+          maxWidth: "600px",
+          border: "1px solid #ddd",
+          padding: "20px",
+          borderRadius: "8px",
+          boxShadow: "2px 2px 10px rgba(0,0,0,0.1)",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        total doctors-
+        <DoctorCountBox />
+      </div>
+
       <div
         style={{
           display: "flex",
@@ -176,10 +195,3 @@ function Dashboard() {
 }
 
 export default Dashboard;
-<<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> 88e79cf04b26c5a63b31b90f586beb20556579b8

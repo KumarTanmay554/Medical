@@ -6,11 +6,7 @@ import { Navbars } from './Navbars';
 import { Footer } from './Footer.jsx';
 // import ConsultancyData from '../../../Backend/models/ConultancyModel.js';
 import AppointmentImg from '../assets/AppointmentImg/svg.png';
-import image1 from "../assets/aboutImages/image1.jpg"; // Adjust the path to your images
-import image2 from "../assets/aboutImages/image2.jpg";
-import image3 from "../assets/aboutImages/image3.jpg";
-import image4 from "../assets/aboutImages/image4.jpg";
-import faqImage from "../assets/aboutImages/faqImage.jpg"; // Add a relevant image for FAQ
+ // Add a relevant image for FAQ
 import axios from 'axios';
 // Icons for services (use Font Awesome or any icon library)
 import {
@@ -76,19 +72,19 @@ const Consultancy = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-<<<<<<< HEAD
+
     const doctor = availableDoctors.filter((doc)=> doc.name == formData.doctor);
     
     const newToken = Math.floor(1000 + Math.random() * 9000);
     console.log("token",newToken)
     setToken(newToken);
     console.log(token)
-=======
-    const newToken = Math.floor(1000 + Math.random() * 9000);
-    console.log("token",newToken)
-    console.log(token)
-    setToken(newToken);
->>>>>>> 88e79cf04b26c5a63b31b90f586beb20556579b8
+
+    // const newToken = Math.floor(1000 + Math.random() * 9000);
+    // console.log("token",newToken)
+    // console.log(token)
+    // setToken(newToken);
+
     
     const payload = { 
       ...formData, 
@@ -110,12 +106,6 @@ const Consultancy = () => {
       }
       // console.log('Response Data:', response.data);
       setAppointment(true);
-<<<<<<< HEAD
-      setError('');
-      // setToken(response.data.token);
-=======
-      // setToken(newToken);
->>>>>>> 88e79cf04b26c5a63b31b90f586beb20556579b8
       setError('');
     } catch (err) {
       console.log("err",err);
@@ -136,15 +126,7 @@ const Consultancy = () => {
       setDoctor(selectedDoctor);
       setAppointment(true);
       setError('');
-<<<<<<< HEAD
 
-      // const newToken = Math.floor(1000 + Math.random() * 9000);
-      // setToken(newToken);
-
-=======
-      // const newToken = Math.floor(1000 + Math.random() * 9000);
-      // setToken(newToken);
->>>>>>> 88e79cf04b26c5a63b31b90f586beb20556579b8
     } else {
       setError('No doctor available for this medical issue');
       setAppointment(false);

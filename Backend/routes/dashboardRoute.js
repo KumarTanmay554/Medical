@@ -26,6 +26,14 @@ router.post("/addDoctor", authorizeRole("admin"), async (req, res) => {
     }
 
 })
+router.get("/count", authorizeRole("admin"), async (req,res)=>{
+    try {
+        const count = await DoctorModel.countDocuments({});
+        res.status(200).json({ message: "Doctor count fetched successfully", count });
+    } catch (error) {
+        res.status(500).json({ message: "Error fetching doctor count", error: error.message });
+    }
+})
 
 router.get("/getAllDoctors", authorizeRole("admin"), async (req, res) => {
     try {

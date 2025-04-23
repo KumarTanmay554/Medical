@@ -200,6 +200,7 @@ import GoToMapButton from "./src/Components/GoToMapButton";
 import AdminRoute from "./src/Pages/AdminRoute";
 import DoctorRoute from "./src/Pages/DoctorRoute";
 import DoctorDashboard from "./src/Pages/DoctorDashboard";
+import AdminAddDoctor from './src/Pages/AdminAddDoctor';
 
 // ChatBot
 import ChatBot from './src/Components/ChatBot';
@@ -296,6 +297,7 @@ function App() {
             element={
               <AdminRoute>
                 <AdminAddDoctor/>
+                {/* <AdminAdd */}
               </AdminRoute>
             }/>
             <Route
