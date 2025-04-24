@@ -200,11 +200,12 @@ import GoToMapButton from "./src/Components/GoToMapButton";
 import AdminRoute from "./src/Pages/AdminRoute";
 import DoctorRoute from "./src/Pages/DoctorRoute";
 import DoctorDashboard from "./src/Pages/DoctorDashboard";
-import AdminAddDoctor from './src/Pages/AdminAddDoctor';
+import AdminAddDoctor from "./src/Pages/AdminAddDoctor";
 
 // ChatBot
-import ChatBot from './src/Components/ChatBot';
-import './src/Components/Chatbot.css';
+import ChatBot from "./src/Components/ChatBot";
+import "./src/Components/Chatbot.css";
+import DoctorProfile from "./src/Pages/DoctorProfile";
 
 function App() {
   const { loading } = useSelector((state) => state.alerts);
@@ -218,11 +219,26 @@ function App() {
         <>
           <Routes>
             {/* Auth */}
-            <Route path='/' element={token ? <FrontPage /> : <Navigate to="/Login" />} />
-            <Route path='/Home' element={token ? <Home /> : <Navigate to="/Login" />} />
-            <Route path='/Login' element={token ? <Navigate to="/" /> : <Login />} />
-            <Route path='/Register' element={token ? <Navigate to="/" /> : <Register />} />
-            <Route path='/Logout' element={token ? <LogOut /> : <Navigate to="/Login" />} />
+            <Route
+              path="/"
+              element={token ? <FrontPage /> : <Navigate to="/Login" />}
+            />
+            <Route
+              path="/Home"
+              element={token ? <Home /> : <Navigate to="/Login" />}
+            />
+            <Route
+              path="/Login"
+              element={token ? <Navigate to="/" /> : <Login />}
+            />
+            <Route
+              path="/Register"
+              element={token ? <Navigate to="/" /> : <Register />}
+            />
+            <Route
+              path="/Logout"
+              element={token ? <LogOut /> : <Navigate to="/Login" />}
+            />
 
             {/* General Pages */}
             <Route path="/FrontPage" element={<FrontPage />} />
@@ -292,19 +308,28 @@ function App() {
               }
             />
             <Route
-            
-            path="/addDoctor"
-            element={
-              <AdminRoute>
-                <AdminAddDoctor/>
-                {/* <AdminAdd */}
-              </AdminRoute>
-            }/>
+              path="/addDoctor"
+              element={
+                <AdminRoute>
+                  <AdminAddDoctor />
+                  {/* <AdminAdd */}
+                </AdminRoute>
+              }
+            />
             <Route
               path="/docDash"
               element={
                 <DoctorRoute>
                   <DoctorDashboard />
+                </DoctorRoute>
+              }
+            />
+
+            <Route
+              path="/DoctorProfile"
+              element={
+                <DoctorRoute>
+                  <DoctorProfile />
                 </DoctorRoute>
               }
             />
