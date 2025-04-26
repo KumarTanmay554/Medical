@@ -35,7 +35,7 @@ router.get("/count", authorizeRole("admin"), async (req,res)=>{
     }
 })
 
-router.get("/getAllDoctors", authorizeRole("admin"), async (req, res) => {
+router.get("/getAllDoctors", async (req, res) => {
     try {
         const doctors = await DoctorModel.find({});
         res.status(200).json({ message: "Doctors fetched successfully", doctors });
